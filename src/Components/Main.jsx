@@ -47,9 +47,6 @@ const Main=()=>{
 
                 <main>
                 <div className="left-content">
-                    {/* <Link to={`/Pokeinfo/` + pokeData.id}>
-                        <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>
-                    </Link> */}
                     
                     <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>
                     
@@ -66,8 +63,6 @@ const Main=()=>{
                         }}>Next</button>}
 
                     </div>
-                </div>
-                <div className="right-content">
                 </div>
                 </main>
             </div>

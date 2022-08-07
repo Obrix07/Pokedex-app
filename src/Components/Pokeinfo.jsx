@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import Header from "./header";
 
 const Pokeinfo = () => {
 
@@ -48,11 +49,16 @@ const Pokeinfo = () => {
 
   return (
     <>
+      <header>
+          <Header />
+      </header>
       {!currentPokemon ? (
         ""
       ) : (
-        <>
-          <div>
+
+        
+        <div className="container-pokeinfo">
+          <div className="poke-evo">
             <h1>{currentPokemon.name}</h1>
             <div className="evolution">
             <div style={{ display: "flex" }}>
@@ -60,16 +66,14 @@ const Pokeinfo = () => {
               <div key={evo.name}>
                 <p>{evo.name}</p>
                 <img
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${evo.id}.png`}
+                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evo.id}.png`}
                   alt=""
                 />
-                <div>{"=>"}</div>
               </div>
             ))}
           </div>
-                <h4>&#10142;</h4>
-                {/* <img src={`${evo}`} alt="" /> */}
             </div>
+            <p className="evolution-text"> Liste des évolutions</p>
           </div>
 
           <div className="type">
@@ -99,7 +103,7 @@ const Pokeinfo = () => {
               );
             })}
           </div>
-        </>
+        </div>
       )}
     </>
   );

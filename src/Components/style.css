@@ -13,6 +13,7 @@
 body{
     background-color: royalblue;
 }
+
 .container{
     width: 100%;
     margin: auto;
@@ -25,12 +26,11 @@ body{
     background-color: rgba(236, 236, 82, 1);
     display: flex;
     justify-content: center;
-    position: fixed;
 }
 
 main {
     width: 80%;
-    margin-top: 120px;
+    margin-top: 50px;
     margin-left: 10%;
 }
 
@@ -42,7 +42,7 @@ a {
 .left-content{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,0.5fr));
-    grid-gap:2rem;
+    grid-gap:3.2rem;
 }
 .card{
     width: 300px;
@@ -69,62 +69,104 @@ a {
     margin: -30px;
 }
 
-.right-content img{
-    height: 100px;
-    padding: 20px;
+.container-pokeinfo {
+    width: 55%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(236, 236, 82, 1);
+    border-radius: 20px;
+    margin-block: 20px;
 }
-.right-content h1{
-    letter-spacing: 1px;
+
+.container-pokeinfo h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.poke-evo {
+    margin-top: 20px;
+    border-radius: 58px;
+    border: 5px solid steelblue;
+}
+
+.poke-evo h1 {
+    margin-top: -20px;
 }
 
 .evolution {
+    margin-top: -20px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+}
+
+.evolution img {
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 150px;
+}
+
+.evolution p {
+    margin-left: 80px;
+    font-size: 1.4rem;
 }
 
 .evolution h4 {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.evolution-text {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
 }
 
 .abilities{
-    width: 80%;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.abilities h2, .type h3 {
+    display: flex;
+    justify-content: center;
+}
+
 .abilities .group{
-    border: 5px solid royalblue;
+    border: 5px solid steelblue;
     width: 250px;
     padding: 0.1rem;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     border-radius: 8px;
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
 .base-stat{
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 
 .type {
-    font-size: 0.6rem;
     color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-left: 1rem;
     margin: auto;
+    margin-top: 20px;
 }
 
 .type .group {
-    background-color: royalblue;
+    background-color: steelblue;
     color: white;
     padding: 0.2rem;
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-left: 10px;
     width: 150px;
 }
@@ -147,4 +189,131 @@ a {
 .btn-group button:hover {
     cursor: pointer;
     transform: scale(0.9);
+}
+
+@media (max-width: 1500px) {
+
+    .abilities{
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 1400px) {
+
+    .container-pokeinfo {
+        width: 90%;
+    }
+
+    .abilities{
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .container-pokeinfo {
+        width: 80%;
+    }
+
+    .abilities{
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width: 1050px) {
+
+    .abilities{
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    .container-pokeinfo {
+        width: 90%;
+    }
+
+    .abilities{
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .poke-evo {
+        width: 80%;
+    }
+
+    .poke-evo img {
+        width: 50%;
+    }
+
+    .abilities{
+        flex-direction: column;
+    }
+
+    .container-pokeinfo h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        padding-top: 10px;
+    }
+    
+    .poke-evo h1 {
+        font-size: 1.5rem;
+    }
+
+    .evolution p {
+        margin-left: 60px;
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    .left-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .poke-evo img {
+        width: 40%;
+    }
+    
+    .poke-evo h1 {
+        font-size: 1.5rem;
+    }
+
+    .evolution-text {
+        font-size: 1.5rem;
+    }
+
+    .evolution p {
+        margin-left: 40px;
+        font-size: 1.4rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .evolution img {
+        margin-right: 20px;
+        margin-left: 20px;
+        width: 40%;
+    }
+
+    .evolution p {
+        margin-left: 20px;
+        font-size: 1.2rem;
+    }
+
 }

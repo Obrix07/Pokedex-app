@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"
 
 const Card = ({ pokemon, loading,infoPokemon}) => {
-   // console.log(pokemon);
+    
     return (
         <>
         {
