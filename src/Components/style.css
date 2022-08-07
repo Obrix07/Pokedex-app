@@ -39,7 +39,7 @@ a {
     color: black;
 }
 
-.left-content{
+.main-content{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,0.5fr));
     grid-gap:3.2rem;

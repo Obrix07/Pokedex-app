@@ -46,7 +46,7 @@ const Main=()=>{
                 </header>
 
                 <main>
-                <div className="left-content">
+                <div className="main-content">
                     
                     <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>
                     
